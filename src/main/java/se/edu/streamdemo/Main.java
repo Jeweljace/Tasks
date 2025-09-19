@@ -59,10 +59,15 @@ public class Main {
 
     public static void printDeadlines(ArrayList<Task> tasksData) {
         System.out.println("Printing deadlines using iteration ...");
+        ArrayList<Task> deadlines = new ArrayList<>();
         for (Task t : tasksData) {
             if (t instanceof Deadline) {
-                System.out.println(t);
+                deadlines.add(t);
+                //System.out.println(t);
             }
+        }
+        for (Deadline d : deadlines) {
+            System.out.println(d);
         }
     }
 
